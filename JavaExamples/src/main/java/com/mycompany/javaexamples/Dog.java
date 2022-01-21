@@ -6,6 +6,7 @@ package com.mycompany.javaexamples;
 public class Dog {
     private String name;
     private int age;
+    //private Dog friend;
 
     public String getName() {
         return name;
@@ -36,7 +37,7 @@ public class Dog {
     public void play() {
         System.out.println(this.name + " is playing!");
     }
-    public void play() {
+    public void play(Dog friend) {
         System.out.println(this.name + " is playing with " + friend.getName() + "!");
     }
 }
