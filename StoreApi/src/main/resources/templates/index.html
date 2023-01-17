@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Kirpparille</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <div style="position: absolute; top: 0; right: 0; width: 400px; text-align:right;">
+        Tähän kirjautunut käyttäjä
+        <form method="get" action="/">
+            <button>Kirjaudu ulos</button>
+        </form>
+    </div>
+
+    <h1>Kirpparille?</h1>
+        <form method="get" action="/stores">
+            <button>Selaa Kirppareita</button>
+        </form>
+    <br>
+        <form method="post" action="/stores">
+            <input type="text" name="name" placeholder="Name of the store" required>
+            <br>
+            <input type="text" name="location"  placeholder="Location" required></input>
+            <br>
+            <button type="submit">Create store</button>
+        </form>
+        <form method="get" action="/join">
+            <button>Luo käyttäjä</button>
+        </form>
+    </body>
+</html>

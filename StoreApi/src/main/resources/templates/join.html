@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Luo käyttäjä</title>
+</head>
+<body>
+<div style="position: absolute; top: 0; right: 0; width: 400px; text-align:right;">
+    Tähän kirjautunut käyttäjä
+    <form method="get" action="/">
+        <button>Kirjaudu ulos</button>
+    </form>
+</div>
+    <h1>Kirpparille?</h1>
+<div class="alert alert-danger" role="alert" th:text="${error}" th:if="${error}"></div>
+    <form method="post" action="/join">
+        <input type="text" name="userName" placeholder="käyttäjänimi" required>
+            <br>
+                <input type="password" name="userPassword"  placeholder="Salasana" required></input>
+            <br>
+        <button type="submit">Luo Käyttäjä</button>
+    </form>
+    <form method="get" action="/">
+        <button>Takaisin</button>
+    </form>
+</body>
+</html>

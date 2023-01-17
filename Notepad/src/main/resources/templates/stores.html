@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kirpparit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<div style="position: absolute; top: 0; right: 0; width: 400px; text-align:right;" >
+    käyttäjä
+    <form method="get" action="/">
+        <button>Kirjaudu ulos</button>
+    </form>
+</div>
+
+    <h1>Kirpparille?</h1>
+    <ul>
+        <li th:each="store:${stores}">
+            <a th:href="@{stores/{item}(item=${store.name})}" th:text="${store.name}">Store</a>
+        </li>
+    </ul>
+    <form method="get" action="/">
+        <button>Takaisin</button>
+    </form>
+</body>
+</html>
